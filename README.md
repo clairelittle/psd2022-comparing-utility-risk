@@ -122,7 +122,7 @@ A summary of the key and target variables is listed below. For each dataset, the
 
 **UK** 
 - Targets: LTILL, FAMTYPE, TENURE
-- Predictors: AREAP, AGE, SEX, MSTATUS, ETHGROUP, ECONPRIM
+- Keys: AREAP, AGE, SEX, MSTATUS, ETHGROUP, ECONPRIM
 
 
 
