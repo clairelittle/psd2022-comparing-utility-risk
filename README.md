@@ -1,6 +1,6 @@
 # Code and data for Comparing the Utility and Disclosure Risk of Synthetic Data with Samples of Microdata
 
-This repository contains information about the data and code used for the paper (which is available [here](https://arxiv.org/pdf/2207.03339.pdf)
+This repository contains information about the data and code used for the paper (which is available [here](https://arxiv.org/pdf/2207.03339.pdf))
 
 **Note** this repository is a work in progress, with further information still to be added
 
@@ -64,6 +64,7 @@ The code for this project was written using a mixture of R and python. The [code
 - Ratio of Counts (ROC) univariate
 - Ratio of Counts (ROC) for bivariate cross-tabulations
 - Confidence Interval Overlap (CIO)
+
 and the disclosure risk metric:
 - Targeted Correct Attribution Probability (TCAP)
 
@@ -74,7 +75,7 @@ The mean of the three utility values was used as the overall utility score, and 
 The ROC univariate was calculated for all variables in the dataset, and ROC bivariate for all combinations of two variables. For each dataset missing values were included as an extra category/value (i.e. not discarded).
 
 **Note** to calculate the ROC (and only for this purpose) for the Canada 2011 Census data, the CA2011A_INCTOT variable was binned into ten categories of approximately similar size: 
-"""\[-Inf, 1200), \[1200, 9000), \[15100, 20800), \[20800, 28100), \[28100, 35400), \[35400, 43800), \[43800, 55600), \[55600, 75400), \[75400, Inf\], \[9000, 15100)"""
+	\[-Inf, 1200), \[1200, 9000), \[15100, 20800), \[20800, 28100), \[28100, 35400), \[35400, 43800), \[43800, 55600), \[55600, 75400), \[75400, Inf\], \[9000, 15100)
 
 
 ### Confidence Interval Overlap (CIO)
@@ -88,11 +89,13 @@ For each dataset, two logistic regressions were performed, with housing tenure a
 **Fiji** 
 - Targets: FJ2007A_MARST, FJ2007A_TENURE
 - Predictors: FJ2007A_AGE, FJ2007A_SEX, FJ2007A_CLASSWKR, FJ2007A_PROV, FJ2007A_ETHNIC, FJ2007A_EDATTAIN, FJ2007A_RELIGION, FJ2007A_TENURE/FJ2007A_MARST
+
 Note that the following variables were aggregated: FJ2007A_EDATTAIN (four categories: primary and below, secondary, post_secondary, other); FJ2007A_ETHNIC (three categories: Fijian, Indian, other); FJ2007A_RELIGION (six categories: Methodist, Catholic, Seventh Day Adventist, Assembly of God, Sanatan, None) 
 
 **Rwanda** 
 - Targets: RW2012A_MARST, RW2012A_OWNERSH
 - Predictors: RW2012A_AGE, RW2012A_SEX, RW2012A_CLASSWK, RW2012A_DISAB1, RW2012A_EDCERT, RW2012A_RELIG, RW2012A_LIT, RW2012A_OWNERSH/RW2012A_MARST
+
 Note that the following variables were aggregated: RW2012A_LIT (three categories: None, Kinyarwanda, Other, Unknown); RW2012A_DISAB1 (two categories: None, Yes) 
 
 **UK** 
