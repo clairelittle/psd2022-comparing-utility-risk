@@ -5,7 +5,7 @@ This repository contains information about the data and code used for the paper 
 **Note** this repository is a work in progress, with further information still to be added
 
 ## Data
-Four Census datasets were used. The Canada, Fiji and Rwanda datasets were obtained from [IPUMS international] (https://international.ipums.org/international/) and the UK dataset was obtained from the UK Data Service, study number [7210](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7210). Details of the datasets and the variables used for each follow:
+Four Census datasets were used. The Canada, Fiji and Rwanda datasets were obtained from [IPUMS-international](https://international.ipums.org/international/) and the UK dataset was obtained from the UK Data Service, study number [7210](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7210). Details of the datasets and the variables used for each follow:
 
 ### Canada 2011 Census data
 URBAN, CA2011A_TENURE, OCCISCO, CA2011A_SEX, CA2011A_AGE, CA2011A_RELATE, CA2011A_IND, CA2011A_INCTOT, CA2011A_DEGREE, CA2011A_YRIMM, CA2011A_LANG, CA2011A_BPL, CA2011A_MINORITY, CA2011A_ABIDENT, CA2011A_MARST, CA2011A_CLASSWK, CA2011A_RELIG, CA2011A_CITIZEN, CA2011A_TRANWORK, CA2011A_WKFULL, CA2011A_HRSWK, CA2011A_EMPSTAT, CA2011A_WKSWORK, CA2011A_BPLPOP, CA2011A_BPLMOM
@@ -58,7 +58,7 @@ Using python version 3.8.3, ctgan version 0.4.3, sdv version 0.12.1, torch verio
 Default parameters were used, with the number of epochs set at 300.
 
 
-## Utility and Risk metrics
+## Code - Utility and Risk metrics
 
 The code for this project was written using a mixture of R and python. The [code](code) folder contains code for the metrics used to analyse the data. That is, the utility metrics:
 - Ratio of Counts (ROC) univariate
@@ -74,8 +74,9 @@ The mean of the three utility values was used as the overall utility score, and 
 
 The ROC univariate was calculated for all variables in the dataset, and ROC bivariate for all combinations of two variables. For each dataset missing values were included as an extra category/value (i.e. not discarded).
 
-**Note** to calculate the ROC (and only for this purpose) for the Canada 2011 Census data, the CA2011A_INCTOT variable was binned into ten categories of approximately similar size: 
-	\[-Inf, 1200), \[1200, 9000), \[15100, 20800), \[20800, 28100), \[28100, 35400), \[35400, 43800), \[43800, 55600), \[55600, 75400), \[75400, Inf\], \[9000, 15100)
+**Note** to calculate the ROC (and only for this purpose) for the Canada 2011 Census data, the CA2011A_INCTOT variable was binned into ten categories of approximately similar size:
+
+```[-Inf, 1200), [1200, 9000), [9000, 15100), [15100, 20800), [20800, 28100), [28100, 35400), [35400, 43800), [43800, 55600), [55600, 75400), [75400, Inf]```
 
 
 ### Confidence Interval Overlap (CIO)
