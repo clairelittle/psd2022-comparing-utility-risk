@@ -36,6 +36,8 @@ The dataset consisted of 104267 records and 15 variables.
 ### Census Data Samples
 For each of the four Census datasets random samples, without replacement, of increasing sizes were drawn (0.1%, 0.25%, 0.5%, 1%, 2%, 3%, 4%, 5%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 95%, 96%, 97%, 98%, 99%). For each of these sample fractions n=100 random samples were drawn, producing 100 datasets of that sample fraction size. For instance, for the UK dataset 100 datasets with 104 records (0.1% of the overall 104267 records) were created, 100 datasets with 260 records (0.25%) were created, and so on. 
 
+The code used to generate the samples is in the [code](code) folder.
+
 For the utility and risk metrics the samples were treated in the same way as the synthetic data; by comparing against the original (100%) dataset. For each metric the average across the 100 datasets was used, in order to guard against unusual results.
 
 ## Synthetic Data
@@ -60,7 +62,7 @@ Default parameters were used, with the number of epochs set at 300.
 
 ## Code - Utility and Risk metrics
 
-The code for this project was written using a mixture of R and python. The [code](code) folder contains code for the metrics used to analyse the data. That is, the utility metrics:
+The code for this project was written using a mixture of R and python. The [code](code) folder contains code for the generation of the data samples, and the metrics used to analyse the data. That is, the utility metrics:
 - Ratio of Counts (ROC) univariate
 - Ratio of Counts (ROC) for bivariate cross-tabulations
 - Confidence Interval Overlap (CIO)
