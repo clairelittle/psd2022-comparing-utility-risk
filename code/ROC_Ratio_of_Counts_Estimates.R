@@ -39,7 +39,7 @@
 #     results:    the ratio of estimates/counts for the particular variable
 
 
-roe_univariate <- function(original, synthetic, var_num) {
+roc_univariate <- function(original, synthetic, var_num) {
   # create frequency tables for the original and synthetic data, on the variable
   orig_table <- as.data.frame(ftable(original[,var_num]))
   syn_table <- as.data.frame(ftable(synthetic[,var_num]))
@@ -57,8 +57,8 @@ roe_univariate <- function(original, synthetic, var_num) {
   combined$min <- pmin(combined$prop.x, combined$prop.y)
   # roc is min divided by max (a zero value for min results in a zero for ROC, as expected)
   combined$roc <- combined$min/combined$max 
-  #combined$roc[is.na(combined$roc)] <- 1
-  mean(combined$roc)
+  combined$roc[is.na(combined$roc)] <- 1
+  return(mean(combined$roc))
 }
 
 
@@ -96,7 +96,7 @@ roc_bivariate <- function(original, synthetic, var1, var2){
   combined$min <- pmin(combined$prop.x, combined$prop.y)
   # roc is min divided by max (a zero value for min results in a zero for ROC, as expected)
   combined$roc <- combined$min/combined$max 
-  #combined$roc[is.na(combined$roc)]<-1
+  combined$roc[is.na(combined$roc)]<-1
   return(mean(combined$roc))
 }
 
