@@ -1,6 +1,6 @@
 # Code and data for Comparing the Utility and Disclosure Risk of Synthetic Data with Samples of Microdata
 
-This repository contains information about the data and code used for the paper (which is available [here](https://arxiv.org/pdf/2207.03339.pdf))
+This repository contains information about the data and code used for the paper (which is available [here](https://link.springer.com/chapter/10.1007/978-3-031-13945-1_17))
 
 **Note** this repository is a work in progress, with further information still to be added
 
