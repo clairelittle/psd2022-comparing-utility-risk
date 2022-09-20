@@ -2,8 +2,6 @@
 
 This repository contains information about the data and code used for the paper (which is available [here](https://link.springer.com/chapter/10.1007/978-3-031-13945-1_17))
 
-**Note** this repository is a work in progress, with further information still to be added
-
 ## Data
 Four Census datasets were used. The Canada, Fiji and Rwanda datasets were obtained from [IPUMS-international](https://international.ipums.org/international/) and the UK dataset was obtained from the UK Data Service, study number [7210](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7210). Details of the datasets and the variables used for each follow:
 
