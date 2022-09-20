@@ -39,7 +39,7 @@ The code used to generate the samples is in the [code](code) folder.
 For the utility and risk metrics the samples were treated in the same way as the synthetic data; by comparing against the original (100%) dataset. For each metric the average across the 100 datasets was used, in order to guard against unusual results.
 
 ## Synthetic Data
-The synthetic data was created using [synthpop](https://synthpop.org.uk/), [DataSynthesizer](https://github.com/DataResponsibly/DataSynthesizer) and [CTGAN](https://github.com/sdv-dev/CTGAN). Datasets the same size as the original were generated. For each method/parameter setting 5 models were created (using different random seeds) and 1 synthetic dataset generated from each. For the utility and risk metrics the average across the five datasets was used, in order to guard against unusual results.
+The synthetic data was created using [synthpop](https://synthpop.org.uk/), [DataSynthesizer](https://github.com/DataResponsibly/DataSynthesizer) and [CTGAN](https://github.com/sdv-dev/CTGAN). Fully synthetic datasets the same size as the original were generated. For each method/parameter setting 5 models were created (using different random seeds) and 1 synthetic dataset generated from each. For the utility and risk metrics the average across the five datasets was used, in order to guard against unusual results.
 
 ### Synthpop
 Using R version 4.1.3, and Synthpop version 1.7-0. Default parameters were used, and the visit sequence was set to numerical variables first (alphabetically) then categorical variables in order of number of categories (ascending, with a tie decided by alphabetical order). Visit sequences for each of the Census datasets:
