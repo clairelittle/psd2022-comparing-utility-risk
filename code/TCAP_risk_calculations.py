@@ -9,7 +9,7 @@ There are two functions:
 
     replace_missing() takes the dataset (in the form of a pandas dataframe) and replaces any missing/NA values. It is called from the tcap() function
 
-    tcap() takes the original and synthetic dataset and calculates the TCAP score. This is a simplified version of the code and does not contain the tau or eqmax parameters (as they were not needed for these experiments)
+    tcap() takes the original and synthetic dataset and calculates the TCAP score. This is a simplified version of the code and does not contain the tau or eqmax parameters (as they were not needed for these experiments). At least 3 key variables are required (the code could be altered to change this)
 
 
 NOTE: the code was written quickly for convenience and is not concise. It does not contain error checking, so use at own risk and make sure the results make sense!
@@ -127,3 +127,14 @@ def tcap(original, synth, num_keys, target, key1, key2, key3, key4=None, key5=No
         print('The baseline is: ', baseline)
 
     return(output)
+
+
+
+''' 
+Example of usage, where the target is housing tenure and 3 key variables are used (area, age, marital status).
+The original and synthetic datasets are csv files. Setting verbose as True prints detailed results
+'''
+original = 'original_data.csv'
+synth = 'synthetic_data.csv'
+
+tcap_score = tcap(original, synth, num_keys=3, target='TENURE',key1='AREAP', key2='AGE', key3='MSTATUS', verbose=True)
